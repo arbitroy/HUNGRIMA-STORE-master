@@ -1,0 +1,16 @@
+.button {
+    -fx-background-color: #52c3af;
+    -fx-font-family: "Microsoft JhengHei";
+}
+.button2 {
+    -fx-background-color:  #E0EAFC;
+    -fx-font-family: "Microsoft JhengHei";
+}
+.button2:hover {
+    -fx-font-size: 18px;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-insets: 0;
+    -fx-border-width: 0 0 0 5px;
+    -fx-background-color: darken;
+}

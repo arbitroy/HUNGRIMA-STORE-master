@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="710.0" prefWidth="1021.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hungrima_store.InvoiceController">
+   <children>
+      <AnchorPane layoutX="75.0" layoutY="47.0" prefHeight="639.0" prefWidth="871.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <MFXTableView fx:id="tb_invoice" footerVisible="false" layoutX="51.0" layoutY="53.0" prefHeight="457.0" prefWidth="769.0" />
+            <MFXButton fx:id="bt_generate" layoutX="592.0" layoutY="529.0" prefHeight="40.0" prefWidth="118.0" stylesheets="@button.css" text="Generate Invoice" />
+            <MFXButton fx:id="bt_search" layoutX="271.0" layoutY="529.0" prefHeight="40.0" prefWidth="81.0" stylesheets="@button.css" text="Search" />
+            <Label contentDisplay="CENTER" layoutX="378.0" prefHeight="53.0" prefWidth="162.0" text="Invoice Form" textAlignment="CENTER" textFill="#170101" underline="true">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="533.0" prefHeight="31.0" prefWidth="70.0" text="Customer" textFill="#170101">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="383.0" layoutY="533.0" prefHeight="31.0" prefWidth="70.0" text="Sale ID" textFill="#170101">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="tf_id" disable="true" editable="false" floatMode="DISABLED" layoutX="459.0" layoutY="525.0" prefHeight="40.0" prefWidth="118.0" />
+            <MFXComboBox fx:id="tf_cname" layoutX="143.0" layoutY="529.0" />
+            <MFXButton fx:id="bt_reload" layoutX="722.0" layoutY="530.0" prefHeight="39.0" prefWidth="91.0" stylesheets="@button.css" text="Reload">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/icons8-refresh-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+            <MFXButton fx:id="bt_home" buttonType="RAISED" depthLevel="LEVEL3" layoutX="377.0" layoutY="581.0" prefHeight="29.0" prefWidth="118.0" stylesheets="@button.css" text="Home" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

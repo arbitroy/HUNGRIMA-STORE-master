@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="709.0" prefWidth="1021.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hungrima_store.SupplyController">
+   <children>
+      <AnchorPane layoutX="34.0" prefHeight="503.0" prefWidth="815.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="103.5" AnchorPane.topAnchor="103.5">
+         <children>
+            <HBox prefHeight="503.0" prefWidth="954.0">
+               <children>
+                  <AnchorPane prefHeight="503.0" prefWidth="381.0">
+                     <children>
+                        <Label contentDisplay="CENTER" layoutX="106.0" prefHeight="53.0" prefWidth="162.0" text="Supply Form" textAlignment="CENTER" textFill="#170101" underline="true">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="155.0" prefHeight="25.0" prefWidth="103.0" text="Product Name" textFill="#170101">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="213.0" prefHeight="25.0" prefWidth="103.0" text="Quantity" textFill="#170101">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="275.0" prefHeight="25.0" prefWidth="103.0" text="Cost" textFill="#170101">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="336.0" prefHeight="25.0" prefWidth="103.0" text="Supply Date" textFill="#170101">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                        <MFXTextField fx:id="tf_quantity" layoutX="145.0" layoutY="201.0" prefHeight="34.0" prefWidth="150.0" />
+                        <MFXTextField fx:id="tf_cost" layoutX="145.0" layoutY="263.0" prefHeight="34.0" prefWidth="150.0" />
+                        <MFXButton fx:id="bt_home" buttonType="RAISED" depthLevel="LEVEL3" layoutX="139.0" layoutY="449.0" prefHeight="29.0" prefWidth="75.0" stylesheets="@button.css" text="Home" />
+                        <ButtonBar layoutX="37.0" layoutY="399.0" prefHeight="42.0" prefWidth="245.0">
+                           <buttons>
+                              <MFXButton fx:id="bt_add" buttonType="RAISED" depthLevel="LEVEL3" prefHeight="29.0" prefWidth="94.0" stylesheets="@button.css" text="Add" />
+                              <MFXButton fx:id="bt_delete" buttonType="RAISED" depthLevel="LEVEL3" prefHeight="29.0" prefWidth="94.0" stylesheets="@button.css" text="Delete" />
+                              <MFXButton fx:id="bt_update" buttonType="RAISED" depthLevel="LEVEL3" prefHeight="29.0" prefWidth="94.0" stylesheets="@button.css" text="Update" />
+                           </buttons>
+                        </ButtonBar>
+                        <Label layoutX="25.0" layoutY="96.0" prefHeight="25.0" prefWidth="103.0" text="Supply ID" textFill="#170101">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                        <MFXTextField fx:id="tf_supplyid" layoutX="145.0" layoutY="84.0" prefHeight="34.0" prefWidth="150.0" />
+                        <MFXDatePicker fx:id="tf_supplydate" layoutX="145.0" layoutY="330.0" />
+                        <MFXComboBox fx:id="tf_pname" layoutX="145.0" layoutY="148.0" prefHeight="34.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="503.0" prefWidth="501.0">
+                     <children>
+                        <Label contentDisplay="CENTER" layoutX="181.0" layoutY="6.0" prefHeight="53.0" prefWidth="162.0" text="Supply Table" textAlignment="CENTER" textFill="#170101" underline="true">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <MFXTableView fx:id="tb_supply" footerVisible="false" layoutX="14.0" layoutY="82.0" prefHeight="324.0" prefWidth="537.0" />
+      
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

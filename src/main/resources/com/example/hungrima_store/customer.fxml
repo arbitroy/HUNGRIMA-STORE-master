@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="709.0" prefWidth="1021.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hungrima_store.CustomerController">
+   <children>
+      <AnchorPane prefHeight="434.0" prefWidth="738.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="141.5" AnchorPane.rightAnchor="141.5" AnchorPane.topAnchor="138.0">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="738.0">
+               <children>
+                  <AnchorPane prefHeight="434.0" prefWidth="346.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="161.0" prefHeight="25.0" prefWidth="103.0" text="Name" textFill="#170101">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="246.0" prefHeight="31.0" prefWidth="103.0" text="Phone Number" textFill="#170101">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                        <ButtonBar layoutX="21.0" layoutY="321.0" prefHeight="42.0" prefWidth="245.0">
+                           <buttons>
+                              <MFXButton fx:id="bt_add" buttonType="RAISED" depthLevel="LEVEL3" prefHeight="29.0" prefWidth="94.0" stylesheets="@button.css" text="Add" />
+                              <MFXButton fx:id="bt_delete" buttonType="RAISED" depthLevel="LEVEL3" prefHeight="29.0" prefWidth="94.0" stylesheets="@button.css" text="Delete" />
+                              <MFXButton fx:id="bt_update" buttonType="RAISED" depthLevel="LEVEL3" prefHeight="29.0" prefWidth="94.0" stylesheets="@button.css" text="Update" />
+                           </buttons>
+                        </ButtonBar>
+                        <Label contentDisplay="CENTER" layoutX="92.0" layoutY="14.0" prefHeight="53.0" prefWidth="188.0" text="Customer Form" textAlignment="CENTER" textFill="#170101" underline="true">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <MFXTextField fx:id="tf_custname" layoutX="149.0" layoutY="149.0" prefHeight="34.0" prefWidth="150.0" />
+                        <MFXTextField fx:id="tf_phoneno" layoutX="149.0" layoutY="237.0" prefHeight="34.0" prefWidth="150.0" />
+                        <MFXButton fx:id="bt_home" buttonType="RAISED" depthLevel="LEVEL3" layoutX="124.0" layoutY="369.0" prefHeight="29.0" prefWidth="75.0" stylesheets="@button.css" text="Home" />
+                        <Label fx:id="c" layoutX="28.0" layoutY="79.0" prefHeight="25.0" prefWidth="103.0" text="Customer Id" textFill="#170101">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </Label>
+                        <MFXTextField fx:id="tf_custid" layoutX="145.0" layoutY="67.0" prefHeight="34.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="434.0" prefWidth="396.0">
+                     <children>
+                        <Label contentDisplay="CENTER" layoutX="97.0" layoutY="7.0" prefHeight="53.0" prefWidth="188.0" text="Customer Table" textAlignment="CENTER" textFill="#170101" underline="true" AnchorPane.bottomAnchor="374.0">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <MFXTableView fx:id="tb_customers" footerVisible="false" layoutX="64.0" layoutY="67.0" prefHeight="328.0" prefWidth="246.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

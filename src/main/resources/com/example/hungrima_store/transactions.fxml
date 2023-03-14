@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="710.0" prefWidth="1021.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hungrima_store.TransactionsController">
+   <children>
+      <AnchorPane layoutX="169.0" prefHeight="542.0" prefWidth="684.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 20;" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="169.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <Label layoutX="251.0" layoutY="14.0" text="Transaction Table" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="442.0" text="Product Name">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="442.0" text="Current Stock ">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="14.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="tf_pname" floatMode="BORDER" layoutX="162.0" layoutY="427.0" prefHeight="49.0" prefWidth="145.0">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font></MFXTextField>
+            <MFXTextField fx:id="tf_cs" allowEdit="false" animated="false" disable="true" editable="false" floatMode="BORDER" layoutX="543.0" layoutY="427.0" prefHeight="50.0" prefWidth="94.0" selectable="false">
+               <font>
+                  <Font name="Microsoft JhengHei" size="18.0" />
+               </font></MFXTextField>
+            <MFXButton fx:id="bt_search" buttonType="RAISED" depthLevel="LEVEL3" layoutX="315.0" layoutY="437.0" prefHeight="29.0" prefWidth="94.0" stylesheets="@button.css" text="Search" />
+            <MFXButton fx:id="bt_reload" buttonType="RAISED" depthLevel="LEVEL3" layoutX="508.0" layoutY="490.0" prefHeight="29.0" prefWidth="94.0" stylesheets="@button.css" text="Reload">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/icons8-refresh-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic></MFXButton>
+            <MFXButton fx:id="bt_print" buttonType="RAISED" depthLevel="LEVEL3" layoutX="93.0" layoutY="490.0" prefHeight="32.0" prefWidth="94.0" stylesheets="@button.css" text="Print" />
+            <MFXTableView fx:id="tb_transactions" footerVisible="false" layoutX="51.0" layoutY="77.0" prefHeight="325.0" prefWidth="583.0" />
+            <MFXButton fx:id="bt_home" buttonType="RAISED" depthLevel="LEVEL3" layoutX="307.0" layoutY="490.0" prefHeight="32.0" prefWidth="94.0" stylesheets="@button.css" text="Home" />
+
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

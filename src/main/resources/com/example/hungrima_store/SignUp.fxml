@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hungrima_store.SignUpController">
+   <AnchorPane prefHeight="400.0" prefWidth="257.0" style="-fx-background-color: #0E4d92;">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@Images/Lg.png" />
+      </ImageView>
+      <Label layoutX="37.0" layoutY="168.0" text="HUNGRIMA STORE" textFill="#110101">
+         <font>
+            <Font name="Microsoft JhengHei" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="243.0" prefHeight="26.0" prefWidth="150.0" text="Contact : 0700000000" textFill="#140101">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+   <AnchorPane prefHeight="401.0" prefWidth="409.0" style="-fx-background-color: transparent;">
+       <Label layoutX="44.0" layoutY="34.0" prefHeight="48.0" prefWidth="95.0" text="Username">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="92.0" prefHeight="48.0" prefWidth="95.0" text="Password">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="167.0" prefHeight="48.0" prefWidth="254.0" text="What  position do you hold?">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rb_admin" layoutX="124.0" layoutY="232.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="87.0" text="Admin">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rb_user" layoutX="124.0" layoutY="267.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="User">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="16.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="button_signup" layoutX="121.0" layoutY="313.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #0E4D92;" text="Sign Up" textFill="#110202">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="100.0" layoutY="353.0" prefHeight="48.0" prefWidth="135.0" text="Already a member?" textFill="#140101">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_login" layoutX="232.0" layoutY="365.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Login" textFill="#001a80" underline="true">
+         <font>
+            <Font name="Microsoft JhengHei Bold" size="12.0" />
+         </font>
+      </Button>
+      <MFXTextField fx:id="tf_username" floatMode="DISABLED" layoutX="139.0" layoutY="34.0" prefHeight="49.0" prefWidth="150.0" />
+      <MFXPasswordField fx:id="tf_password" floatMode="DISABLED" layoutX="139.0" layoutY="92.0" prefHeight="49.0" prefWidth="150.0" />
+      <ImageView fx:id="exit" fitHeight="27.0" fitWidth="30.0" layoutX="348.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/icons8-close-64.png" />
+         </image>
+      </ImageView>
+   </AnchorPane>
+</HBox>
