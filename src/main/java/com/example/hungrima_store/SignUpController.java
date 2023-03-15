@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import static com.example.hungrima_store.DBUtils.changeScene;
@@ -38,7 +39,11 @@ public class SignUpController implements Initializable {
             String toggleName = ((RadioButton) toggleGroup.getSelectedToggle()).getText();
 
             if(!tf_username.getText().trim().isEmpty() && !tf_password.getText().trim().isEmpty()){
-                DBUtils.signUpUser(event, tf_username.getText(), tf_password.getText(), toggleName);
+                try {
+                    DBUtils.signUpUser(event, tf_username.getText(), tf_password.getText(), toggleName);
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
             }else{
                 System.out.println("Please fill in all information");
                 Alert alert = new Alert(Alert.AlertType.ERROR);

@@ -31,7 +31,7 @@ public class DBUtils {
         stage.show();
     }
 
-    public static void signUpUser(ActionEvent event, String username, String password, String position){
+    public static void signUpUser(ActionEvent event, String username, String password, String position) throws SQLException {
 
         try {
             connection = new DBConnector().getConnection();
@@ -40,6 +40,7 @@ public class DBUtils {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        connection.setAutoCommit(false);
         PreparedStatement psInsert = null;
         PreparedStatement psCheckUserExists = null;
         ResultSet resultSet = null;
@@ -49,11 +50,14 @@ public class DBUtils {
             psCheckUserExists.setString(1, username);
             resultSet = psCheckUserExists.executeQuery();
 
-            if (resultSet.isBeforeFirst()){
-                System.out.println("User already exists");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("You cannot use this username.");
-                alert.show();
+            if (resultSet.next()){
+                int count = resultSet.getInt(1);
+                if (count > 0) {
+                    System.out.println("User already exists");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("You cannot use this username.");
+                    alert.show();
+                }
             }else{
                 psInsert = connection.prepareStatement("INSERT INTO users(username, password, position) VALUES (?, ?, ?)");
                 psInsert.setString(1, username);
